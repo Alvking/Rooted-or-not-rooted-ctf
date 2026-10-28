@@ -15,9 +15,25 @@ First, I navigated to the directory containing the challenge file and opened the
 cd Downloads
 jadx-gui vaultapp.apk
 ![Opening the file](Screenshot_2026-10-28_16-57-09)
+
+
+
+
+
+
+
+
 ### **Step 2: Decompiling and Code Analysis**
 Once loaded in jadx-gui, I analyzed the application structure. Specifically, I inspected the RootCheck class to understand how root detection (isDeviceRooted) is implemented and where the encoded flag and key derivation logic for the debug panel (unlockDebugFlag) are located.
 ![decompling and code analysis](Screenshot_2026-10-28_16-58-33)
+
+
+
+
+
+
+
+
 Step 3: Decrypting the Flag
 Using the key derivation logic and the encoded byte array extracted from RootCheck.java, I wrote a Python script (main.py) to replicate the XOR operation and decrypt the flag:
 
